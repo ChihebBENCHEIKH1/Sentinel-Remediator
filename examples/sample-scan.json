@@ -1,0 +1,45 @@
+{
+  "scan_id": "scan-001",
+  "image_name": "myapp",
+  "image_tag": "latest",
+  "scan_timestamp": "2024-01-15T10:30:00Z",
+  "repo_url": "https://github.com/example/myapp",
+  "branch": "main",
+  "dockerfile_path": "Dockerfile",
+  "vulnerabilities": [
+    {
+      "id": "VULN-001",
+      "severity": "HIGH",
+      "type": "RUN_AS_ROOT",
+      "title": "Container runs as root user",
+      "description": "The container is configured to run as the root user, which increases the attack surface and potential impact of container escapes.",
+      "file_path": "Dockerfile",
+      "line_number": 1,
+      "suggestion": "Add a non-root user and use the USER directive to switch to it before the ENTRYPOINT or CMD."
+    },
+    {
+      "id": "VULN-002",
+      "severity": "MEDIUM",
+      "type": "NO_HEALTHCHECK",
+      "title": "No HEALTHCHECK defined",
+      "description": "The Dockerfile does not define a HEALTHCHECK instruction. This makes it harder for orchestrators to know when the container is ready or if it's still functioning properly.",
+      "file_path": "Dockerfile",
+      "line_number": 0,
+      "suggestion": "Add a HEALTHCHECK instruction to periodically verify the container's health."
+    },
+    {
+      "id": "VULN-003",
+      "severity": "CRITICAL",
+      "type": "OUTDATED_BASE_IMAGE",
+      "title": "Outdated base image with known vulnerabilities",
+      "description": "The base image 'node:16' has known CVEs. Consider updating to a newer, patched version.",
+      "file_path": "Dockerfile",
+      "line_number": 1,
+      "suggestion": "Update to node:20-alpine or the latest LTS version.",
+      "cve_id": "CVE-2023-12345",
+      "package": "node",
+      "version": "16.0.0",
+      "fix_version": "20.0.0"
+    }
+  ]
+}
