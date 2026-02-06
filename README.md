@@ -2,7 +2,7 @@
 
 An autonomous AI agent that takes vulnerability scan results and automatically generates, tests, and creates pull requests to fix container security issues.
 
-![Dashboard Overview](/home/chiheb/.gemini/antigravity/brain/09f473b1-9517-4429-bd1c-341a538da77e/dashboard_overview_1770372160146.png)
+![Dashboard Overview](docs/assets/dashboard-overview.png)
 
 ## Overview
 
@@ -12,7 +12,7 @@ Sentinel-Remediator uses the ReAct (Reasoning + Acting) pattern to solve securit
 
 The project consists of a high-performance Go backend orchestrating the AI reasoning and tool execution, paired with a modern Next.js dashboard for real-time monitoring.
 
-![Architecture](/home/chiheb/.gemini/antigravity/brain/09f473b1-9517-4429-bd1c-341a538da77e/reasoning_pipeline_view_1770372283413.png)
+![Architecture](docs/assets/architecture.png)
 
 ## Core Features
 
