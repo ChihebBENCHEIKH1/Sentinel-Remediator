@@ -53,8 +53,8 @@ sentinel-remediator/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/sentinel-remediator.git
-   cd sentinel-remediator
+   git clone https://github.com/ChihebBENCHEIKH1/Sentinel-Remediator.git
+   cd Sentinel-Remediator
    ```
 
 2. Run the setup script to install dependencies and configure the environment:
